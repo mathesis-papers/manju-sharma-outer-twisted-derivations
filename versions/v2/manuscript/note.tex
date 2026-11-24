@@ -1,0 +1,470 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,longtable}
+\usepackage[colorlinks=true,allcolors=blue,breaklinks=true]{hyperref}
+\usepackage{microtype}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\Der}{\mathcal D}
+\newcommand{\Inn}{\operatorname{Inn}}
+\newcommand{\Out}{\operatorname{Out}}
+\newcommand{\adj}{\operatorname{adj}}
+\title{Manju--Sharma's outer-derivation conjecture:\\
+a correction from Noferini--Williams Smith forms}
+\author{Haobo Ma\thanks{ChronoAI Pte Ltd, Singapore.}
+\and Wenlin Zhang\thanks{National University of Singapore; ChronoAI Pte Ltd, Singapore.}}
+\date{November 17, 2026\\[3pt]
+\small Creative Commons Attribution 4.0 International (CC BY 4.0)}
+\begin{document}
+\maketitle
+\begin{abstract}
+An elementary alternative proof of the cyclotomic specialization of
+Noferini--Williams Smith forms (2024, Theorem 3.11; 2026, Theorems 2.2
+and 2.4) \cite{NW24,NW26} corrects Manju and Sharma's printed
+Conjecture 5.2 in \emph{Twisted Derivations in Algebraic Number Fields},
+arXiv:2412.03507v2 (9 April 2026), Section 5.2, p.~30.
+Its Gaussian witness is a specialization of Chaudhuri's 2019 quadratic
+construction.
+For distinct twists $\sigma(\zeta)=\zeta^u$, $\tau(\zeta)=\zeta^v$ on
+$O=\ZZ[\zeta]$, the outer module is $O/(\zeta^v-\zeta^u)O$.
+Writing $h=n/\gcd(n,|v-u|)$, its additive group is
+$(\ZZ/\ell\ZZ)^{\varphi(n)/\varphi(h)}$ if $h$ is a power of a prime
+$\ell$, and is zero otherwise. Thus, for $n=p^k$ and
+$e=v_p(|v-u|)$, the correct adjugate denominator is $p^{p^e}$,
+not $p^e$; the printed test is integral for every derivation.
+Nonzero outer classes nevertheless exist for every prime-power twist
+pair. The same theorem settles the related determinant and innerness
+conjectures, including the prime-conductor conjectures in the authors'
+number-rings paper, and classifies conductors for which every distinct
+twist pair admits nonzero outer classes.
+\end{abstract}
+
+\section{The printed criterion and its quadratic specialization}
+Let $n\geq3$, let $\zeta$ be a primitive $n$th root of unity, and put
+$K=\QQ(\zeta)$, $O=\ZZ[\zeta]$, and $N=\varphi(n)$.
+The ring $O$ is the ring of integers of $K$, with ordered integral basis
+$1,\zeta,\ldots,\zeta^{N-1}$.
+Choose distinct units $u,v$ modulo $n$, represented by integers
+$1\leq u,v<n$, and let $\sigma,\tau$ be the $\ZZ$-algebra
+automorphisms taking $\zeta$ to $\zeta^u,\zeta^v$, respectively.
+A $(\sigma,\tau)$-derivation is a $\ZZ$-linear map $D:O\to O$ with
+\[
+ D(xy)=D(x)\tau(y)+\sigma(x)D(y)\qquad(x,y\in O).
+\]
+It is inner if $D(x)=\gamma(\tau(x)-\sigma(x))$ for one $\gamma\in O$
+and every $x\in O$. Write $\Der$ for the $O$-module of these
+derivations, $\Inn$ for the inner submodule, and $\Out=\Der/\Inn$.
+Thus $[D]\neq0$ means precisely that $D$ is not inner, as in
+\cite[Definition 2.1 and Remark 2.6, pp.~3--4]{MS}.
+
+Set $\delta=\tau(\zeta)-\sigma(\zeta)\neq0$. Let $A\in M_N(\ZZ)$
+be the multiplication matrix of $\delta$ in the ordered basis above,
+and let $C$ be the coordinate column of $D(\zeta)$.
+Here $\adj(A)$ is the classical adjugate: $A\adj(A)=(\det A)I_N$.
+For $n=p^k$, $k\geq2$, write $|v-u|=p^e m$ with $p\nmid m$;
+then $0\leq e<k$. Conjecture 5.2 of \cite{MS} asserts
+\begin{equation}\label{eq:printed}
+ [D]\neq0\quad\Longleftrightarrow\quad p^{-e}\adj(A)C\notin\ZZ^N,
+\end{equation}
+and asserts $\Inn\subsetneq\Der$. The criterion is false; the latter
+existence assertion is true. Conjecture 4.4 asserts the corresponding
+innerness criterion with membership in $\ZZ^N$.
+
+Normalized-difference generators over unique factorization domains
+already give the Gaussian construction; see Larsson
+\cite[Theorem 2.6, p.~11]{Larsson}, crediting Hartwig, Larsson and
+Silvestrov. Chaudhuri's Theorem 4.2(i) \cite{C}, present in its
+30 December 2019 version, explicitly supplies the quadratic family.
+Manju and Sharma \cite[Theorems 3.2--3.4,
+pp.~12--13]{MSrings} reproduce this classification with attribution and
+an independent proof, and give innerness conditions. Their generator criteria
+\cite[Lemma 2.12 and Corollary 3.7]{MS} also underlie the evaluation
+description below. The same evaluation/principal-ideal proof appears for
+polynomial algebras over a characteristic-zero field in Ilwale
+\cite[Proposition 3.3, p.~9]{Ilwale}; its coefficient domain is different
+from $\ZZ[\zeta]$. Our purpose is to apply these established methods and
+cyclotomic arithmetic to the exact printed conjectures, preserving the
+distinction between their false criteria and true existence assertions.
+
+\begin{proposition}\label{prop:gaussian}
+For $O=\ZZ[i]$, $\sigma=\mathrm{id}$ and $\tau$ complex conjugation,
+the map $D(a+bi)=b$ has a nonzero outer class, but
+$2^{-1}\adj(A)C\in\ZZ^2$. It contradicts both printed criteria.
+\end{proposition}
+\begin{proof}
+For $a,b,c,d\in\ZZ$,
+\[
+ D((a+bi)(c+di))=ad+bc=b(c-di)+(a+bi)d.
+\]
+Thus the twisted law holds on all Gaussian integers. Innerness would
+require $1=-2i\gamma$, hence $\gamma=i/2\notin\ZZ[i]$.
+Here $n=4$, $p=k=2$, $u=1$, $v=3$, $e=1$, and
+\[
+ A=\begin{pmatrix}0&2\\-2&0\end{pmatrix},\quad C=\binom10,
+ \quad \adj(A)=\begin{pmatrix}0&-2\\2&0\end{pmatrix},
+ \quad \frac{\adj(A)C}{2}=\binom01.
+\]
+The correct inverse vector is $A^{-1}C=(0,1/2)^T$, since $\det A=4$.
+\end{proof}
+
+\section{The outer group for every conductor}
+The order of $\zeta^{v-u}$ determines the entire additive quotient.
+The arithmetic conclusion is a specialization of Noferini and Williams
+\cite[Theorems 2.2 and 2.4, pp.~5--7]{NW26}; the prime-power case
+already follows from their earlier Swap Theorem
+\cite[Theorem 3.11, p.~10]{NW24}. We give an elementary alternative
+proof using the classical cyclotomic unit calculation of Louboutin
+\cite[Lemma 1, p.~76]{Louboutin}.
+\begin{theorem}\label{thm:general}
+With the notation above, put $h=n/\gcd(n,|v-u|)>1$ and
+$d=\varphi(n)/\varphi(h)$. Evaluation at $\zeta$ is an $O$-module
+isomorphism $\Der\simeq O$ taking $\Inn$ onto $\delta O$. Consequently
+\begin{equation}\label{eq:quotient}
+ \Out\simeq O/\delta O,\qquad
+ [D]=0\quad\Longleftrightarrow\quad
+ \frac{\adj(A)C}{\det A}\in\ZZ^N.
+\end{equation}
+Moreover
+\begin{equation}\label{eq:norm}
+ \det A=\Phi_h(1)^d,\qquad
+ \Out\simeq
+ \begin{cases}
+  (\ZZ/\ell\ZZ)^d,&h=\ell^s\text{ for a prime }\ell\text{ and }s\geq1,\\
+  0,&h\text{ has at least two distinct prime divisors},
+ \end{cases}
+\end{equation}
+where the second isomorphism is one of additive groups. In particular,
+nonzero outer classes exist exactly when $h$ is a prime power.
+Equivalently, the Smith form of $A$ is $I_{N-d}\oplus\ell I_d$ in
+the prime-power-order case, and $I_N$ otherwise.
+\end{theorem}
+\begin{proof}
+For $c\in O$, define
+\[
+ D_c(x)=c\frac{\tau(x)-\sigma(x)}{\delta}\qquad(x\in O).
+\]
+For $x=f(\zeta)$, $f\in\ZZ[X]$, polynomial divisibility of
+$f(T)-f(S)$ by $T-S$ shows that the quotient lies in $O$.
+It is independent of the polynomial representing $x$, since the
+expression uses the two maps on $O$. It is $\ZZ$-linear, and
+\[
+ \tau(xy)-\sigma(xy)
+ =(\tau(x)-\sigma(x))\tau(y)+\sigma(x)(\tau(y)-\sigma(y))
+\]
+gives the twisted law and $D_c(\zeta)=c$.
+Conversely $D(1)=0$ follows from the twisted law at $1\cdot1$.
+Applying that law successively to $\zeta^{j+1}=\zeta^j\zeta$ determines
+$D$ on the power basis from $D(\zeta)$. Evaluation is therefore an
+isomorphism. An inner multiplier $\gamma$ gives
+$D(\zeta)=\delta\gamma$, proving the quotient description.
+Since $\delta\neq0$, multiplication by $\delta$ is invertible over $K$;
+the unique rational solution of $AX=C$ is
+$X=(\det A)^{-1}\adj(A)C$. This proves the innerness criterion.
+
+Put $\eta=\zeta^{v-u}$, a primitive $h$th root.
+The absolute norm of $\zeta^u$ is one. Reduction
+$(\ZZ/n\ZZ)^\times\to(\ZZ/h\ZZ)^\times$ is surjective: lift units
+at primes dividing $h$, choose nonzero residues at the other primes
+dividing $n$, and use the Chinese remainder theorem. Its fibers have
+size $d$. Taking the product over the embeddings
+$\zeta\mapsto\zeta^a$ therefore yields
+\[
+ |\det A|=|N_{K/\QQ}(\delta)|
+ =\left(\prod_{\substack{1\leq a<h\\(a,h)=1}}(1-\eta^a)\right)^d
+ =\Phi_h(1)^d.
+\]
+Every embedding of $K$ is nonreal, because a real primitive $n$th root
+would have order at most two. Pairing conjugate embeddings makes the
+norm a product of positive squared absolute values, so $\det A>0$.
+
+For $h=\ell^s$, the identity
+$\Phi_{\ell^s}(X)=\sum_{j=0}^{\ell-1}X^{j\ell^{s-1}}$ gives
+$\Phi_h(1)=\ell$. For all other $h>1$, $\Phi_h(1)=1$.
+Indeed, evaluation at one of $(X^h-1)/(X-1)$ gives
+$h=\prod_{t\mid h,\,t>1}\Phi_t(1)$; induction shows that the proper
+prime-power divisors already contribute the full product $h$ when
+$h$ is not a prime power.
+
+If $h=\ell^s$, the factorization
+$\ell=\prod_{(a,h)=1}(1-\eta^a)$ shows that $\delta$, which differs
+from $1-\eta$ by a unit, divides $\ell$. Thus
+$\ell O\subseteq\delta O$, and $O/\delta O$ is an $\FF_\ell$-vector
+space. Its cardinality is $\det A=\ell^d$: integer Smith normal form
+computes both the lattice index and determinant as the product of the
+diagonal entries. Its dimension is $d$. When $\det A=1$, the integer
+matrix $A$ is unimodular, so $\delta O=O$. This proves every case.
+\end{proof}
+
+\section{Prime powers and the related conjectures}
+\begin{corollary}\label{cor:primepower}
+For $n=p^k$, $k\geq2$, and $e=v_p(|v-u|)$,
+\begin{equation}\label{eq:primepower}
+ \det A=p^{p^e},\qquad \Out\simeq(\ZZ/p\ZZ)^{p^e},\qquad
+ [D]\neq0\ \Longleftrightarrow\ \frac{\adj(A)C}{p^{p^e}}\notin\ZZ^N.
+\end{equation}
+The printed vector $p^{-e}\adj(A)C$ is integral for every $D\in\Der$.
+Divisibility of all coordinates of $C$ by $p$ suffices for innerness.
+Divisibility by $p^e$ suffices if $e\geq1$, but not if $e=0$.
+Here $p^{p^e}$ is the denominator paired with the unscaled classical
+adjugate; the least positive integer clearing all entries of $A^{-1}$
+is $p$.
+\end{corollary}
+\begin{proof}
+Here $h=p^{k-e}$ and $d=p^e$, so Theorem~\ref{thm:general} proves
+\eqref{eq:primepower} and the strict inclusion $\Inn\subsetneq\Der$.
+Its proof gives $p/\delta\in O$; hence $pA^{-1}$ is an integer matrix
+and $pO\subseteq\delta O$. Moreover
+\[
+ p^{-e}\adj(A)C=p^{p^e-e-1}(pA^{-1}C)\in\ZZ^N,
+\]
+since $p^e\geq2^e\geq e+1$ for every $e\geq0$.
+For $e\geq1$, $p^eO\subseteq pO$. For $e=0$, take $n=9$, $u=1$,
+$v=2$, and $D=D_1$. All coordinates are divisible by $p^e=1$, but
+$1\notin\delta O$ because $\delta O$ has index three. Thus $D$ is
+not inner. These establish all stated sufficient-condition boundaries.
+Finally the nonzero quotient has exponent $p$, so $pA^{-1}$ is integral
+and no smaller positive integer clears $A^{-1}$.
+\end{proof}
+
+\begin{corollary}\label{cor:prime}
+For an odd prime conductor $n=p$, $\det A=p$,
+$\Out\simeq\ZZ/p\ZZ$, and $D$ is inner exactly when
+$p^{-1}\adj(A)C\in\ZZ^{p-1}$. If $p$ divides every coordinate,
+$D$ is inner; nonzero outer classes exist.
+\end{corollary}
+\begin{proof}
+Distinct units have difference prime to $p$, so $h=p$ and $d=1$.
+Apply Theorem~\ref{thm:general} and $pO\subseteq\delta O$.
+This proves Conjectures 3.12 and 3.13 of \cite[p.~18]{MSrings},
+including the positive determinant and both clauses of Conjecture 3.13.
+\end{proof}
+
+\begin{corollary}\label{cor:quadratic}
+Let $s\neq1$ be squarefree with $s\equiv1\pmod4$, put
+$\theta=(1+\sqrt{s})/2$, and take the two distinct automorphisms of
+$R=\ZZ[\theta]$. For $D(\theta)=\alpha+\beta\theta$,
+\begin{equation}\label{eq:quadratic}
+ D\text{ is inner}\quad\Longleftrightarrow\quad s\mid 2\alpha+\beta.
+\end{equation}
+Thus the sufficient condition that $\beta$ be even in
+\cite[Theorem 4.2(ii), pp.~7--9]{C} is insufficient.
+For example, $s=-3$, $D(\theta)=1$ has $\beta=0$ but is not inner.
+\end{corollary}
+\begin{proof}
+The divided-difference and generator-uniqueness argument in
+Theorem~\ref{thm:general} applies to any monogenic domain $\ZZ[\theta]$
+with distinct endomorphisms, and hence allows every value $D(\theta)$
+here. Up to sign, the unique inner multiplier is
+\[
+ \frac{\alpha+\beta\theta}{\sqrt{s}}
+ =\frac{(s-1)\beta/2-\alpha}{s}
+  +\frac{2\alpha+\beta}{s}\theta.
+\]
+Both coefficients are integral exactly when $s\mid2\alpha+\beta$:
+necessity follows from the second coefficient, and sufficiency for the
+first follows because $s$ is odd. The example has $s\nmid2$; its ring
+is also $\ZZ[\zeta_6]$. This exact criterion is equivalent to the two
+divisibility tests already given by Manju and Sharma
+\cite[Theorem 3.5, p.~13; present in v1, p.~11]{MSrings}.
+Their statement uses coefficients of $D(\sqrt{s})=2D(\theta)$, which
+does not change divisibility by the odd integer $s$.
+\end{proof}
+
+\begin{corollary}\label{cor:twofactor}
+Let $n=2^r q$ with $r\geq1$ and $q$ an odd prime. Write
+$|v-u|=2^a q^b m$ with $\gcd(m,2q)=1$ and $m>0$; necessarily
+$a\geq1$. Then, with $N=2^{r-1}(q-1)$,
+\begin{equation}\label{eq:twofactor}
+\begin{array}{c|c|c}
+\text{condition}&\det A&\Out\text{ additively}\\\hline
+1\leq a<r,\ b\geq1 &2^{2^a(q-1)} &(\ZZ/2\ZZ)^{2^a(q-1)}\\
+a\geq r,\ b=0 &q^{2^{r-1}} &(\ZZ/q\ZZ)^{2^{r-1}}\\
+\text{other admissible pairs}&1&0
+\end{array}
+\end{equation}
+In the first two rows, innerness is equivalent to
+$(\det A)^{-1}\adj(A)C\in\ZZ^N$, and outer classes are nonzero
+exactly when that vector is nonintegral. Divisibility of all coordinates
+by $2$ in the first row, or by $q$ in the second, suffices for innerness.
+Every derivation is inner in the last row.
+\end{corollary}
+\begin{proof}
+The order $h=n/\gcd(n,|v-u|)$ is respectively $2^{r-a}$, $q$, or a
+number with both prime divisors $2$ and $q$. The possibility $h=1$ is
+excluded by distinct twists. Theorem~\ref{thm:general} gives the three
+rows and all innerness and existence claims. In its prime-power-order
+cases $\delta$ divides $2$ or $q$, proving the sufficient conditions.
+Divisibility by the displayed determinant also suffices, since it is
+a multiple of the corresponding prime.
+\end{proof}
+
+\begin{corollary}\label{cor:universal}
+For $n\geq3$, every distinct twist pair on $\ZZ[\zeta_n]$ has nonzero
+outer classes if and only if $n$ is a prime power or twice an odd prime
+power.
+\end{corollary}
+\begin{proof}
+If $n$ is a prime power, every $h>1$ dividing $n$ is a prime power.
+If $n=2p^k$ with $p$ odd, unit exponents are odd, so $h>1$ divides
+$p^k$. Conversely take $u=1$, $v=n-1$. Then
+$\gcd(n,v-u)=\gcd(n,2)$, hence $h=n/\gcd(n,2)$.
+Outside the two stated forms, this $h$ has at least two distinct prime
+divisors, and Theorem~\ref{thm:general} gives $\Out=0$.
+\end{proof}
+
+\section{Coverage and attribution}
+The following table distinguishes asserted conjectures from extensions
+not posed in the sources. All references to \cite{MS} are to its
+9 April 2026 version; those to \cite{MSrings} are to its 2 April 2026
+version. The prime-conductor case is referred to \cite{MSrings} at the
+end of Section 4.2 of \cite{MS}.
+\begin{small}
+\begin{longtable}{@{}p{.25\linewidth}p{.70\linewidth}@{}}
+\toprule Source and locator&Conclusion and mathematical scope\\\midrule
+\endhead
+\cite{C}, Theorem 4.2(i), p.~7 &
+Reproved; prior proof Chaudhuri, 2019, Theorem 4.2(i), pp.~6--7
+(2020 version, p.~7); a normalized-difference precursor is
+\cite[Theorem 2.6]{Larsson}.
+The quadratic construction is specialized in Proposition~\ref{prop:gaussian};
+\cite[Theorems 3.2--3.4]{MSrings} later repeats and credits it.\\
+\cite{C}, Theorem 4.2(ii), pp.~7--9 &
+Refuted-and-corrected: evenness of $\beta$ alone is insufficient;
+Corollary~\ref{cor:quadratic} gives a counterexample and the exact
+replacement, reproving the equivalent criterion of
+\cite[Theorem 3.5; first posted 2024]{MSrings}.\\
+\cite{MS}, Conjecture 4.1, Section 4.1, p.~12 &
+Reproved; prior proof of the arithmetic specialization:
+Noferini--Williams, 2026. All three determinant formulas follow in
+Corollary~\ref{cor:twofactor}.\\
+\cite{MS}, Conjecture 4.2, Section 4.1, p.~12 &
+Proved after the rank correction below, using the prior arithmetic
+specialization of Noferini--Williams, 2026: all innerness criteria,
+both sufficient divisibility conditions in each nonunit case, and
+universal innerness in the unit case, Corollary~\ref{cor:twofactor}.\\
+\cite{MS}, Conjecture 4.3, Section 4.2, p.~20 &
+Reproved; prior proof of the arithmetic specialization:
+Noferini--Williams, 2024. See Corollary~\ref{cor:primepower}.\\
+\cite{MS}, Conjecture 4.4, Section 4.2, p.~20 &
+Refuted-and-corrected: the printed criterion fails by
+Proposition~\ref{prop:gaussian}; Corollary~\ref{cor:primepower} gives
+the corrected denominator and resolves both sufficient conditions,
+including the counterexample at $e=0$.\\
+\cite{MS}, Conjecture 5.1, Section 5.1, p.~30 &
+Proved after the rank and index corrections below, using the prior
+Noferini--Williams arithmetic, 2026: all outer-class
+criteria and existence or nonexistence assertions,
+Corollary~\ref{cor:twofactor}.\\
+\cite{MS}, Conjecture 5.2, Section 5.2, p.~30 &
+Refuted-and-corrected: replace $p^e$ by $p^{p^e}$.
+Its universal existence assertion is proved, not refuted,
+Corollary~\ref{cor:primepower}.\\
+\cite{MSrings}, Conjectures 3.12--3.13, Section 3.2, p.~18 &
+Proved: positive determinant $p$, the exact innerness criterion,
+sufficient divisibility by $p$, and nonzero outer classes,
+Corollary~\ref{cor:prime}. The determinant and additive quotient
+reprove the Noferini--Williams specialization, 2024.\\
+Arbitrary-conductor group and all-pairs classification &
+Not posed; proved. The group calculation reproves a specialization of
+Noferini--Williams \cite{NW24,NW26}; the all-pairs consequence is
+Corollary~\ref{cor:universal}.\\
+\cite{MS}, Section 6; \cite{MSrings}, Section 4 &
+Not covered: the coding constructions and code parameters.\\
+\bottomrule
+\end{longtable}
+\end{small}
+In Conjectures 4.2 and 5.1 of \cite{MS}, the printed coordinate space
+$\ZZ^{2^r(q-1)}$ must have rank $N=2^{r-1}(q-1)$, the length of $C$.
+In Conjecture 5.1(i), the unbound exponent index $i$ in its denominator
+is replaced by $a=e_1$, matching Conjectures 4.1(i) and 4.2(i).
+The table establishes the mathematical statements with these stated
+notation corrections; it does not treat an undefined index as an
+asserted numerical identity. No converse or universal generalization
+unasserted in the sources is labelled refuted.
+
+For the prime-power Smith-form comparison, put $f(T)=T^{p^e}-1$ and
+$g(T)=\Phi_{p^k}(T)$, so $\deg f=p^e\leq N$. Noferini--Williams's Swap Theorem gives
+$f(C_g)\sim I_{N-p^e}\oplus g(C_f)$, and
+$g(C_f)=\sum_{j=0}^{p-1}C_f^{jp^{k-1}}=pI_{p^e}$ because
+$C_f^{p^e}=I$. Multiplication by $\zeta^v-\zeta^u$ differs by a
+unit from multiplication by $\zeta^{p^e}-1$, so their Smith forms agree.
+Indeed, writing $|v-u|=p^e m$, the two geometric quotients for $m$ and
+its inverse modulo $p^{k-e}$ are integral and inverse to each other.
+For arbitrary $n$, their later theorem applies to
+$f(T)=T^{\gcd(n,|v-u|)}-1$ and $g(T)=\Phi_n(T)$; these are coprime
+and $g$ is squarefree. The norm argument supplies a direct alternative
+proof of this cyclotomic specialization.
+
+\section{Verification scope}
+Theorem~\ref{thm:general} and Corollaries~\ref{cor:primepower}--\ref{cor:universal}
+have the written proofs above. The accompanying \texttt{verify.py}
+uses exact integer and rational arithmetic: it checks the Gaussian law
+on all four ordered basis pairs, its adjugate vectors, the conductor-nine
+and conductor-six counterexamples, and the determinants and additive quotient groups for
+all 1,338 unordered distinct unit pairs at the 24 conductors listed in
+\texttt{README.md}, with maximum degree 24. Determinants and ranks modulo
+the relevant prime determine the nontrivial Smith factors; these are
+finite checks, separate from the general proof.
+
+At commit \texttt{1ff680e6cc902e88cfbba1b684826388e2ac8d37}, the
+\href{https://github.com/the-omega-institute/trureturing/blob/1ff680e6cc902e88cfbba1b684826388e2ac8d37/D5/S3/Arith/TwistedDerivations/ManjuSharmaConjectureFourFour.lean}{Conjecture 4.4 Lean source}
+contains \texttt{gaussianEquiv}, the generator-preserving identification
+with the actual cyclotomic integer ring of conductor four;
+\texttt{derivation\_twisted}, the law on every pair of its integers.
+The declaration \texttt{derivation\_not\_inner} gives non-innerness of this map;
+\texttt{printed\_test}, integrality of its printed vector; and
+\texttt{result}, negation of the printed Conjecture 4.4.
+The pinned
+\href{https://github.com/the-omega-institute/trureturing/blob/1ff680e6cc902e88cfbba1b684826388e2ac8d37/D5/S3/Arith/TwistedDerivations/ManjuSharmaConjectureFiveTwo.lean}{Conjecture 5.2 Lean source}
+defines \texttt{outerClass} in the quotient of twisted derivations by
+inner derivations. Its \texttt{result} negates the full printed
+conjunction using that Gaussian outer class. It does not negate the
+separate universal existence assertion. These declarations concern
+the Gaussian counterexample and its two refutations; the general
+group classification and corollaries have the written proofs above.
+
+\begin{thebibliography}{9}
+\bibitem{C} D.~Chaudhuri,
+\emph{A note on $(\sigma,\tau)$-derivations on commutative algebras},
+\href{https://arxiv.org/abs/1912.12812v2}{arXiv:1912.12812v2},
+14 April 2020, Theorem 4.2, pp.~7--9;
+\href{https://arxiv.org/abs/1912.12812v1}{v1}, 30 December 2019,
+Theorem 4.2, pp.~6--8.
+\bibitem{MS} P.~Manju and R.~K.~Sharma,
+\emph{Twisted Derivations in Algebraic Number Fields},
+\href{https://arxiv.org/abs/2412.03507v2}{arXiv:2412.03507v2},
+9 April 2026 (first posted 4 December 2024), Sections 2--5.
+\bibitem{MSrings} P.~Manju and R.~K.~Sharma,
+\emph{$(\sigma,\tau)$-Derivations of Number Rings with Coding Theory Applications},
+\href{https://arxiv.org/abs/2412.03500v3}{arXiv:2412.03500v3},
+2 April 2026 (first posted 4 December 2024), Sections 3.1--3.2.
+\bibitem{NW24} V.~Noferini and G.~Williams,
+\emph{Smith forms of matrices in Companion Rings, with group theoretic
+and topological applications},
+\href{https://arxiv.org/abs/2408.08662v1}{arXiv:2408.08662v1},
+16 August 2024, Theorem 3.11, p.~10.
+\bibitem{NW26} V.~Noferini and G.~Williams,
+\emph{Invariant factors from products of cyclotomic polynomials, with applications},
+\href{https://arxiv.org/abs/2610.19205v1}{arXiv:2610.19205v1},
+13 October 2026, Theorems 2.2 and 2.4, pp.~5--7.
+\bibitem{Louboutin} S.~Louboutin,
+\emph{Resultants of cyclotomic polynomials},
+Publicationes Mathematicae Debrecen \textbf{50} (1997), 75--77,
+\href{https://doi.org/10.5486/pmd.1997.1721}{doi:10.5486/pmd.1997.1721},
+Lemma 1, p.~76.
+\bibitem{Ilwale} K.~Ilwale,
+\emph{Symmetric $(\sigma,\tau)$-algebras and $(\sigma,\tau)$-Hochschild cohomology},
+\href{https://arxiv.org/abs/2304.08918v1}{arXiv:2304.08918v1},
+18 April 2023, Proposition 3.3, p.~9.
+\bibitem{Larsson} D.~Larsson,
+\emph{Arithmetic hom-Lie algebras, twisted derivations and non-commutative
+arithmetic schemes},
+\href{https://arxiv.org/abs/1401.7777v1}{arXiv:1401.7777v1},
+30 January 2014, Theorem 2.6, p.~11.
+\end{thebibliography}
+\end{document}

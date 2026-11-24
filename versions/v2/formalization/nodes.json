@@ -1,0 +1,319 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:manju-sharma-outer-twisted-derivations:2:s1",
+      "kind": "paper",
+      "label": "Proposition",
+      "lean_source": {
+        "revision": "1ff680e6cc902e88cfbba1b684826388e2ac8d37",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/1ff680e6cc902e88cfbba1b684826388e2ac8d37/D5/S3/Arith/TwistedDerivations/ManjuSharmaConjectureFiveTwo.lean"
+      },
+      "lineage": "collected:manju-sharma-outer-twisted-derivations:s1",
+      "macros": {
+        "\\Der": "\\mathcal D",
+        "\\FF": "\\mathbb F",
+        "\\Inn": "\\operatorname{Inn}",
+        "\\Out": "\\operatorname{Out}",
+        "\\QQ": "\\mathbb Q",
+        "\\ZZ": "\\mathbb Z",
+        "\\adj": "\\operatorname{adj}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "manju-sharma-outer-twisted-derivations",
+      "scope": "in_scope",
+      "statement": "For $O=\\ZZ[i]$, $\\sigma=\\mathrm{id}$ and $\\tau$ complex conjugation,\nthe map $D(a+bi)=b$ has a nonzero outer class, but\n$2^{-1}\\adj(A)C\\in\\ZZ^2$. It contradicts both printed criteria.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Manju–Sharma's outer-derivation conjecture: a correction from Noferini–Williams Smith forms",
+      "toolchain": null,
+      "version": 2,
+      "work": "manju-sharma-outer-twisted-derivations"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:manju-sharma-outer-twisted-derivations:2:s2",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "1ff680e6cc902e88cfbba1b684826388e2ac8d37",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/1ff680e6cc902e88cfbba1b684826388e2ac8d37/D5/S3/Arith/TwistedDerivations/ManjuSharmaConjectureFiveTwo.lean"
+      },
+      "lineage": "collected:manju-sharma-outer-twisted-derivations:s2",
+      "macros": {
+        "\\Der": "\\mathcal D",
+        "\\FF": "\\mathbb F",
+        "\\Inn": "\\operatorname{Inn}",
+        "\\Out": "\\operatorname{Out}",
+        "\\QQ": "\\mathbb Q",
+        "\\ZZ": "\\mathbb Z",
+        "\\adj": "\\operatorname{adj}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "manju-sharma-outer-twisted-derivations",
+      "scope": "in_scope",
+      "statement": "With the notation above, put $h=n/\\gcd(n,|v-u|)>1$ and\n$d=\\varphi(n)/\\varphi(h)$. Evaluation at $\\zeta$ is an $O$-module\nisomorphism $\\Der\\simeq O$ taking $\\Inn$ onto $\\delta O$. Consequently\n\\begin{equation}\n \\Out\\simeq O/\\delta O,\\qquad\n [D]=0\\quad\\Longleftrightarrow\\quad\n \\frac{\\adj(A)C}{\\det A}\\in\\ZZ^N.\n\\end{equation}\nMoreover\n\\begin{equation}\n \\det A=\\Phi_h(1)^d,\\qquad\n \\Out\\simeq\n \\begin{cases}\n  (\\ZZ/\\ell\\ZZ)^d,&h=\\ell^s\\text{ for a prime }\\ell\\text{ and }s\\geq1,\\\\\n  0,&h\\text{ has at least two distinct prime divisors},\n \\end{cases}\n\\end{equation}\nwhere the second isomorphism is one of additive groups. In particular,\nnonzero outer classes exist exactly when $h$ is a prime power.\nEquivalently, the Smith form of $A$ is $I_{N-d}\\oplus\\ell I_d$ in\nthe prime-power-order case, and $I_N$ otherwise.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Manju–Sharma's outer-derivation conjecture: a correction from Noferini–Williams Smith forms",
+      "toolchain": null,
+      "version": 2,
+      "work": "manju-sharma-outer-twisted-derivations"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:manju-sharma-outer-twisted-derivations:2:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "1ff680e6cc902e88cfbba1b684826388e2ac8d37",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/1ff680e6cc902e88cfbba1b684826388e2ac8d37/D5/S3/Arith/TwistedDerivations/ManjuSharmaConjectureFiveTwo.lean"
+      },
+      "lineage": "collected:manju-sharma-outer-twisted-derivations:s3",
+      "macros": {
+        "\\Der": "\\mathcal D",
+        "\\FF": "\\mathbb F",
+        "\\Inn": "\\operatorname{Inn}",
+        "\\Out": "\\operatorname{Out}",
+        "\\QQ": "\\mathbb Q",
+        "\\ZZ": "\\mathbb Z",
+        "\\adj": "\\operatorname{adj}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "manju-sharma-outer-twisted-derivations",
+      "scope": "in_scope",
+      "statement": "For $n=p^k$, $k\\geq2$, and $e=v_p(|v-u|)$,\n\\begin{equation}\n \\det A=p^{p^e},\\qquad \\Out\\simeq(\\ZZ/p\\ZZ)^{p^e},\\qquad\n [D]\\neq0\\ \\Longleftrightarrow\\ \\frac{\\adj(A)C}{p^{p^e}}\\notin\\ZZ^N.\n\\end{equation}\nThe printed vector $p^{-e}\\adj(A)C$ is integral for every $D\\in\\Der$.\nDivisibility of all coordinates of $C$ by $p$ suffices for innerness.\nDivisibility by $p^e$ suffices if $e\\geq1$, but not if $e=0$.\nHere $p^{p^e}$ is the denominator paired with the unscaled classical\nadjugate; the least positive integer clearing all entries of $A^{-1}$\nis $p$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Manju–Sharma's outer-derivation conjecture: a correction from Noferini–Williams Smith forms",
+      "toolchain": null,
+      "version": 2,
+      "work": "manju-sharma-outer-twisted-derivations"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:manju-sharma-outer-twisted-derivations:2:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "1ff680e6cc902e88cfbba1b684826388e2ac8d37",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/1ff680e6cc902e88cfbba1b684826388e2ac8d37/D5/S3/Arith/TwistedDerivations/ManjuSharmaConjectureFiveTwo.lean"
+      },
+      "lineage": "collected:manju-sharma-outer-twisted-derivations:s4",
+      "macros": {
+        "\\Der": "\\mathcal D",
+        "\\FF": "\\mathbb F",
+        "\\Inn": "\\operatorname{Inn}",
+        "\\Out": "\\operatorname{Out}",
+        "\\QQ": "\\mathbb Q",
+        "\\ZZ": "\\mathbb Z",
+        "\\adj": "\\operatorname{adj}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "manju-sharma-outer-twisted-derivations",
+      "scope": "in_scope",
+      "statement": "For an odd prime conductor $n=p$, $\\det A=p$,\n$\\Out\\simeq\\ZZ/p\\ZZ$, and $D$ is inner exactly when\n$p^{-1}\\adj(A)C\\in\\ZZ^{p-1}$. If $p$ divides every coordinate,\n$D$ is inner; nonzero outer classes exist.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Manju–Sharma's outer-derivation conjecture: a correction from Noferini–Williams Smith forms",
+      "toolchain": null,
+      "version": 2,
+      "work": "manju-sharma-outer-twisted-derivations"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:manju-sharma-outer-twisted-derivations:2:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "1ff680e6cc902e88cfbba1b684826388e2ac8d37",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/1ff680e6cc902e88cfbba1b684826388e2ac8d37/D5/S3/Arith/TwistedDerivations/ManjuSharmaConjectureFiveTwo.lean"
+      },
+      "lineage": "collected:manju-sharma-outer-twisted-derivations:s5",
+      "macros": {
+        "\\Der": "\\mathcal D",
+        "\\FF": "\\mathbb F",
+        "\\Inn": "\\operatorname{Inn}",
+        "\\Out": "\\operatorname{Out}",
+        "\\QQ": "\\mathbb Q",
+        "\\ZZ": "\\mathbb Z",
+        "\\adj": "\\operatorname{adj}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "manju-sharma-outer-twisted-derivations",
+      "scope": "in_scope",
+      "statement": "Let $s\\neq1$ be squarefree with $s\\equiv1\\pmod4$, put\n$\\theta=(1+\\sqrt{s})/2$, and take the two distinct automorphisms of\n$R=\\ZZ[\\theta]$. For $D(\\theta)=\\alpha+\\beta\\theta$,\n\\begin{equation}\n D\\text{ is inner}\\quad\\Longleftrightarrow\\quad s\\mid 2\\alpha+\\beta.\n\\end{equation}\nThus the sufficient condition that $\\beta$ be even in\n\\cite[Theorem 4.2(ii), pp.~7--9]{C} is insufficient.\nFor example, $s=-3$, $D(\\theta)=1$ has $\\beta=0$ but is not inner.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Manju–Sharma's outer-derivation conjecture: a correction from Noferini–Williams Smith forms",
+      "toolchain": null,
+      "version": 2,
+      "work": "manju-sharma-outer-twisted-derivations"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:manju-sharma-outer-twisted-derivations:2:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "1ff680e6cc902e88cfbba1b684826388e2ac8d37",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/1ff680e6cc902e88cfbba1b684826388e2ac8d37/D5/S3/Arith/TwistedDerivations/ManjuSharmaConjectureFiveTwo.lean"
+      },
+      "lineage": "collected:manju-sharma-outer-twisted-derivations:s6",
+      "macros": {
+        "\\Der": "\\mathcal D",
+        "\\FF": "\\mathbb F",
+        "\\Inn": "\\operatorname{Inn}",
+        "\\Out": "\\operatorname{Out}",
+        "\\QQ": "\\mathbb Q",
+        "\\ZZ": "\\mathbb Z",
+        "\\adj": "\\operatorname{adj}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "manju-sharma-outer-twisted-derivations",
+      "scope": "in_scope",
+      "statement": "Let $n=2^r q$ with $r\\geq1$ and $q$ an odd prime. Write\n$|v-u|=2^a q^b m$ with $\\gcd(m,2q)=1$ and $m>0$; necessarily\n$a\\geq1$. Then, with $N=2^{r-1}(q-1)$,\n\\begin{equation}\n\\begin{array}{c|c|c}\n\\text{condition}&\\det A&\\Out\\text{ additively}\\\\\\hline\n1\\leq a<r,\\ b\\geq1 &2^{2^a(q-1)} &(\\ZZ/2\\ZZ)^{2^a(q-1)}\\\\\na\\geq r,\\ b=0 &q^{2^{r-1}} &(\\ZZ/q\\ZZ)^{2^{r-1}}\\\\\n\\text{other admissible pairs}&1&0\n\\end{array}\n\\end{equation}\nIn the first two rows, innerness is equivalent to\n$(\\det A)^{-1}\\adj(A)C\\in\\ZZ^N$, and outer classes are nonzero\nexactly when that vector is nonintegral. Divisibility of all coordinates\nby $2$ in the first row, or by $q$ in the second, suffices for innerness.\nEvery derivation is inner in the last row.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Manju–Sharma's outer-derivation conjecture: a correction from Noferini–Williams Smith forms",
+      "toolchain": null,
+      "version": 2,
+      "work": "manju-sharma-outer-twisted-derivations"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s7",
+      "contributor": null,
+      "identity": "collected:manju-sharma-outer-twisted-derivations:2:s7",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "1ff680e6cc902e88cfbba1b684826388e2ac8d37",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/1ff680e6cc902e88cfbba1b684826388e2ac8d37/D5/S3/Arith/TwistedDerivations/ManjuSharmaConjectureFiveTwo.lean"
+      },
+      "lineage": "collected:manju-sharma-outer-twisted-derivations:s7",
+      "macros": {
+        "\\Der": "\\mathcal D",
+        "\\FF": "\\mathbb F",
+        "\\Inn": "\\operatorname{Inn}",
+        "\\Out": "\\operatorname{Out}",
+        "\\QQ": "\\mathbb Q",
+        "\\ZZ": "\\mathbb Z",
+        "\\adj": "\\operatorname{adj}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "manju-sharma-outer-twisted-derivations",
+      "scope": "in_scope",
+      "statement": "For $n\\geq3$, every distinct twist pair on $\\ZZ[\\zeta_n]$ has nonzero\nouter classes if and only if $n$ is a prime power or twice an odd prime\npower.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Manju–Sharma's outer-derivation conjecture: a correction from Noferini–Williams Smith forms",
+      "toolchain": null,
+      "version": 2,
+      "work": "manju-sharma-outer-twisted-derivations"
+    }
+  ]
+}

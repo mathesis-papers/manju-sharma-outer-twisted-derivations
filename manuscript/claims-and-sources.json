@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "note_id": "manju-sharma-outer-twisted-derivations",
+  "revision": 2,
+  "claims": [
+    {
+      "source": "https://arxiv.org/abs/2412.03507v2",
+      "locator": "Section 5.2, Conjecture 5.2, p. 30; TeX lines 2240–2242",
+      "asserted_formula": "[D] != 0 iff p^(-e) adj(A) C is not integral; Inn is a proper submodule of Der",
+      "status": "refuted-and-corrected",
+      "replacement": "For n=p^k, k>=2 and e=v_p(|v-u|), [D] != 0 iff adj(A)C/p^(p^e) is not integral. Nonzero outer classes exist for every distinct twist pair. The printed vector is integral for every derivation.",
+      "proof": "Proposition 1, Theorem 2 and Corollary 3 in note.tex",
+      "counterexample": "Z[i], sigma=id, tau=conjugation, D(a+bi)=b; A=[[0,2],[-2,0]], C=(1,0), adj(A)C/2=(0,1), A^(-1)C=(0,1/2)."
+    },
+    {
+      "source": "https://arxiv.org/abs/2412.03507v2",
+      "locator": "Section 4.2, Conjecture 4.4, p. 20; TeX lines 1287–1289",
+      "asserted_formula": "D is inner iff p^(-e) adj(A)C is integral; p^e dividing all coordinates suffices; p dividing all coordinates suffices",
+      "status": "refuted-and-corrected",
+      "replacement": "D is inner iff adj(A)C/p^(p^e) is integral. Divisibility by p always suffices; divisibility by p^e suffices for e>=1 but not for e=0.",
+      "proof": "Proposition 1 and Corollary 3",
+      "boundary_example": "n=9, u=1, v=2, D(zeta)=1; e=0 and the multiplier vector has denominator three."
+    },
+    {
+      "source": "https://arxiv.org/abs/2412.03507v2",
+      "locator": "Section 4.2, Conjecture 4.3, p. 20; TeX lines 1281–1283",
+      "asserted_formula": "det(A)=+/-p^(p^e)",
+      "status": "reproved-prior-proof-cited",
+      "replacement": "In the fixed same-domain/codomain power basis, det(A)=p^(p^e)>0.",
+      "proof": "Corollary 3; the arithmetic Smith form specializes Noferini–Williams 2024, Theorem 3.11."
+    },
+    {
+      "source": "https://arxiv.org/abs/2412.03507v2",
+      "locator": "Section 4.1, Conjectures 4.1–4.2, p. 12; TeX lines 481–502",
+      "asserted_formula": "Three determinant cases for n=2^r*q; corresponding adjugate innerness tests and coordinate divisibility conditions",
+      "status": "proved-with-explicit-notation-correction-and-prior-arithmetic-cited",
+      "replacement": "For |v-u|=2^a*q^b*m, gcd(m,2q)=1, determinants are 2^(2^a*(q-1)) if 1<=a<r and b>=1, q^(2^(r-1)) if a>=r and b=0, and 1 otherwise. Coordinate rank is N=2^(r-1)*(q-1). The prime 2 or q suffices for coordinate divisibility in the first or second case.",
+      "proof": "Corollary 6; arithmetic is a specialization of Noferini–Williams 2026, Theorems 2.2 and 2.4."
+    },
+    {
+      "source": "https://arxiv.org/abs/2412.03507v2",
+      "locator": "Section 5.1, Conjecture 5.1, p. 30; TeX lines 2225–2232",
+      "asserted_formula": "Outer classes are detected by the corresponding nonintegral adjugate vector, with nonzero outer classes in the two nonunit determinant cases and none otherwise",
+      "status": "proved-with-explicit-notation-corrections-and-prior-arithmetic-cited",
+      "replacement": "Use rank N=2^(r-1)*(q-1), and replace the unbound i in part (i) by a=e_1. The determinant denominators and all existence/nonexistence clauses then follow from the quotient theorem.",
+      "proof": "Corollary 6; the undefined printed index is not assigned a numerical truth value."
+    },
+    {
+      "source": "https://arxiv.org/abs/2412.03500v3",
+      "locator": "Section 3.2, Conjectures 3.12–3.13, p. 18; also v1, pp. 15–16",
+      "asserted_formula": "For odd prime conductor, det(A)=p; D is inner iff adj(A)C/p is integral; p dividing all coordinates suffices; nonzero outer classes exist",
+      "status": "proved-with-prior-arithmetic-cited",
+      "replacement": "All assertions hold, and Out is additively Z/pZ.",
+      "proof": "Corollary 4; the determinant and Smith form specialize Noferini–Williams 2024, Theorem 3.11."
+    },
+    {
+      "source": "https://arxiv.org/abs/1912.12812v2",
+      "locator": "Theorem 4.2(ii), pp. 7–9; already present in v1, pp. 6–8",
+      "asserted_formula": "For squarefree s=1 mod 4 and D(theta)=alpha+beta*theta, beta even implies innerness",
+      "status": "refuted-and-corrected-prior-replacement-cited",
+      "replacement": "For s!=1, theta=(1+sqrt(s))/2, innerness is equivalent to s dividing 2*alpha+beta. The criterion is equivalent to Manju–Sharma's Theorem 3.5, present in December 2024.",
+      "counterexample": "s=-3, theta=zeta_6, D(theta)=1: beta=0 is even but the multiplier coordinates are (-1/3,2/3).",
+      "proof": "Corollary 5; exact prior replacement in https://arxiv.org/abs/2412.03500v1, Theorem 3.5, p. 11, and v3, p. 13."
+    },
+    {
+      "source": "https://arxiv.org/abs/2610.19205v1",
+      "locator": "Theorems 2.2 and 2.4, pp. 5–7; f(T)=T^gcd(n,|v-u|)-1, g(T)=Phi_n(T)",
+      "status": "not-posed-as-a-twisted-derivation-claim-arithmetic-specialization-reproved",
+      "statement": "For arbitrary n>=3, Out=O/(zeta^v-zeta^u)O; it is additively (Z/ell Z)^(phi(n)/phi(h)) for h=n/gcd(n,|v-u|) a power of ell, and zero otherwise.",
+      "proof": "Theorem 2 supplies an elementary alternative norm proof of the arithmetic specialization and identifies the derivation quotient."
+    },
+    {
+      "source": "https://arxiv.org/abs/2412.03507v2",
+      "locator": "Extension beyond its conductor-specific conjectures",
+      "status": "not-posed-proved",
+      "statement": "Every distinct twist pair has nonzero outer classes iff n is a prime power or twice an odd prime power.",
+      "proof": "Corollary 7; the converse uses u=1, v=n-1, with h=n/gcd(n,2)."
+    }
+  ],
+  "formal_sources": [
+    {
+      "url": "https://github.com/the-omega-institute/trureturing/blob/1ff680e6cc902e88cfbba1b684826388e2ac8d37/D5/S3/Arith/TwistedDerivations/ManjuSharmaConjectureFourFour.lean",
+      "sha256": "f5c88861eaef1d10e51d39e9b4bf9661dd3c0ee5a2203090ddbc42423230e09c",
+      "declarations": {
+        "gaussianEquiv": "Generator-preserving Gaussian-integer equivalence with the actual conductor-four cyclotomic integer ring",
+        "derivation_twisted": "Twisted law on all pairs of algebraic integers for the Gaussian derivation",
+        "derivation_not_inner": "Non-innerness of that Gaussian derivation",
+        "printed_test": "Integrality of the printed adjugate vector for that example",
+        "result": "Negation of the complete printed Conjecture 4.4 using that example"
+      }
+    },
+    {
+      "url": "https://github.com/the-omega-institute/trureturing/blob/1ff680e6cc902e88cfbba1b684826388e2ac8d37/D5/S3/Arith/TwistedDerivations/ManjuSharmaConjectureFiveTwo.lean",
+      "sha256": "9297f3e037a8afd5a0e703f9599706d2e73dfc381f73fe9b25ce630ccb4083ae",
+      "declarations": {
+        "outerClass": "The actual derivation class modulo the inner submodule",
+        "result": "Negation of the printed Conjecture 5.2 conjunction through the Gaussian biconditional counterexample, not negation of its separate universal existence assertion"
+      }
+    }
+  ],
+  "written_scope": "The arbitrary-conductor quotient, cyclotomic Smith form, corrected criteria, quadratic criterion and all-pairs conductor classification have complete written proofs in the note.",
+  "finite_scope": "Exact checks cover the two quadratic laws, Gaussian vectors, the conductor-nine example, and all 1338 unordered distinct unit pairs at the stated 24 conductors, with maximum degree 24.",
+  "not_covered": ["Section 6 code parameters in arXiv:2412.03507v2", "Section 4 coding constructions in arXiv:2412.03500v3"]
+}

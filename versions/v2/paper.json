@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 105926,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "11a5dc1c6195cee7457f0c2272dbe7a4e2af67ae78e8cce8fdbbbe121b895074",
+      "sha256": "11a5dc1c6195cee7457f0c2272dbe7a4e2af67ae78e8cce8fdbbbe121b895074"
+    },
+    "source": {
+      "bytes": 20619,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "5e720e9ae23f3aa07e4eb64d00b5b86ccaee030f1b672ec6739eca0d0024ad58",
+      "sha256": "5e720e9ae23f3aa07e4eb64d00b5b86ccaee030f1b672ec6739eca0d0024ad58"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "An elementary alternative proof of the cyclotomic specialization of Noferini–Williams Smith forms (2024, Theorem 3.11; 2026, Theorems 2.2 and 2.4) corrects Manju and Sharma's printed Conjecture 5.2 in Twisted Derivations in Algebraic Number Fields, arXiv:2412.03507v2 (9 April 2026), Section 5.2, p. 30. Its Gaussian witness is a specialization of Chaudhuri's 2019 quadratic construction. For distinct twists sigma(zeta)=zeta^u and tau(zeta)=zeta^v on O=Z[zeta], the outer module is O/(zeta^v-zeta^u)O. Writing h=n/gcd(n,|v-u|), its additive group is (Z/ell Z)^(phi(n)/phi(h)) if h is a power of a prime ell, and is zero otherwise. Thus, for n=p^k and e=v_p(|v-u|), the correct adjugate denominator is p^(p^e), not p^e; the printed test is integral for every derivation. Nonzero outer classes nevertheless exist for every prime-power twist pair. The same theorem settles the related determinant and innerness conjectures, including the prime-conductor conjectures in the authors' number-rings paper, and classifies conductors for which every distinct twist pair admits nonzero outer classes.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "1ff680e6cc902e88cfbba1b684826388e2ac8d37",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/1ff680e6cc902e88cfbba1b684826388e2ac8d37/D5/S3/Arith/TwistedDerivations/ManjuSharmaConjectureFiveTwo.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 105926,
+      "sha256": "11a5dc1c6195cee7457f0c2272dbe7a4e2af67ae78e8cce8fdbbbe121b895074",
+      "url": "/api/v1/collected-papers/manju-sharma-outer-twisted-derivations/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-24T01:39:10.523325483Z",
+    "record": "manju-sharma-outer-twisted-derivations",
+    "repository_name": "manju-sharma-outer-twisted-derivations",
+    "source": {
+      "bytes": 20619,
+      "sha256": "5e720e9ae23f3aa07e4eb64d00b5b86ccaee030f1b672ec6739eca0d0024ad58",
+      "url": "/api/v1/collected-papers/manju-sharma-outer-twisted-derivations/files/source?version=2"
+    },
+    "title": "Manju–Sharma's outer-derivation conjecture: a correction from Noferini–Williams Smith forms",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-24T01:39:10.523325483Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "manju-sharma-outer-twisted-derivations"
+  }
+}
