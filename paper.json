@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24487347",
     "current_version": 2,
-    "doi": null,
+    "doi": "10.5281/zenodo.24487348",
     "lean_source": {
       "revision": "1ff680e6cc902e88cfbba1b684826388e2ac8d37",
       "url": "https://github.com/the-omega-institute/trureturing/blob/1ff680e6cc902e88cfbba1b684826388e2ac8d37/D5/S3/Arith/TwistedDerivations/ManjuSharmaConjectureFiveTwo.lean"
